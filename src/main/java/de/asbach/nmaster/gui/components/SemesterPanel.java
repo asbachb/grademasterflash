@@ -23,7 +23,7 @@ import javax.swing.table.TableColumn;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class SemesterPanel extends javax.swing.JPanel {
 

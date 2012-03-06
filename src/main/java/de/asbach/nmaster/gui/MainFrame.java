@@ -41,7 +41,7 @@ import org.jdom.JDOMException;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class MainFrame extends javax.swing.JFrame implements AddTabListener, RefreshGradeListener, NewVersionListener{
     private List<Semester> semesterList;

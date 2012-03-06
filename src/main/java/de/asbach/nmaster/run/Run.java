@@ -8,7 +8,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class Run {
     public static void main(String[]args){

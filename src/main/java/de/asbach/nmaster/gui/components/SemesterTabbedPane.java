@@ -10,7 +10,7 @@ import javax.swing.JTabbedPane;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class SemesterTabbedPane extends JTabbedPane{
     private static final long serialVersionUID = -1265299490510536945L;

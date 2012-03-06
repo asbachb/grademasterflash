@@ -14,7 +14,7 @@ import de.asbach.nmaster.model.Semester;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class SemesterAddDialog extends javax.swing.JDialog {
     private Semester result;

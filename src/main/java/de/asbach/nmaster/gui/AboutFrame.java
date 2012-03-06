@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class AboutFrame extends javax.swing.JDialog {
 

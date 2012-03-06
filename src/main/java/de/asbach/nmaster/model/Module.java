@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class Module implements Serializable{
     private static final long serialVersionUID = -7911838200760911752L;

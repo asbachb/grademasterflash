@@ -21,7 +21,7 @@ import org.jdom.input.SAXBuilder;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class Version extends Thread {
     /* singleton */
@@ -78,7 +78,7 @@ public class Version extends Thread {
                 sBuffer.append(new String(bBuffer, 0, index));
             }
 
-            Pattern p = Pattern.compile("Specification-Version: (.+)");
+            Pattern p = Pattern.compile("Grademasterflash-Version: (.+)");
             Matcher m = p.matcher(sBuffer);
 
             if (!m.find()) {

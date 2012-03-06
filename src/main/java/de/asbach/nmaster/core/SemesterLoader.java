@@ -24,7 +24,7 @@ import org.jdom.output.XMLOutputter;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class SemesterLoader {
     /*private File defaultFile = new File(System.getProperty("user.dir") + 

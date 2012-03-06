@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class Semester implements Serializable{
     private static final long serialVersionUID = -2002944207570138303L;

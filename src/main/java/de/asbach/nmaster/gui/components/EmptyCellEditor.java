@@ -7,7 +7,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class EmptyCellEditor extends DefaultCellEditor {
     private static final long serialVersionUID = 2384357553553140299L;

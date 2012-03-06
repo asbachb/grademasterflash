@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class GrademasterProperties extends Properties{
     private static final long serialVersionUID = 7311417827809871221L;

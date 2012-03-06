@@ -6,12 +6,12 @@ import java.util.List;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class GradeCalculator {
 
     public static double calculateGradeBySemester(Semester s) {
-        int tCreditPoints = 0;
+        double tCreditPoints = 0;
         double tGrade = 0;
 
         for (Module m : s.getModules()) {

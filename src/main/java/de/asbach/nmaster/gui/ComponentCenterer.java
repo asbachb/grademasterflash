@@ -6,7 +6,7 @@ import java.awt.Toolkit;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class ComponentCenterer {
     public static void centerComponent(Component toCenter){

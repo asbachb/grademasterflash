@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class OptionsDialog extends javax.swing.JDialog {
     private static final long serialVersionUID = -8608621550355255484L;

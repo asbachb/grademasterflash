@@ -7,7 +7,7 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class SemesterTableModel extends AbstractTableModel{
     private static final long serialVersionUID = 2738801554947619541L;

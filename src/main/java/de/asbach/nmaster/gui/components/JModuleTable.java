@@ -7,7 +7,7 @@ import javax.swing.table.TableCellRenderer;
 
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class JModuleTable extends JTable {
     private static final long serialVersionUID = -3608698649196032084L;

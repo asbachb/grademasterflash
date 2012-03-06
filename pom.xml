@@ -10,67 +10,9 @@
     <developers>
         <developer>
             <name>Benjamin Asbach</name>
-            <email>benjamin.asbach@gmail.com</email>
+            <email>my.name@gmail.com</email>
         </developer>
     </developers>
-    <!--
-    <repositories>
-        <repository>
-            <id>public</id>
-            <name>Archiva Managed Public Repository</name>
-            <url>http://evil-server.ath.cx:8080/archiva/repository/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>internal</id>
-            <name>Archiva Managed Internal Repository</name>
-            <url>http://evil-server.ath.cx:8080/archiva/repository/internal/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>internal-snapshots</id>
-            <name>Archiva Managed Internal-Snapshot Repository</name>
-            <url>http://evil-server.ath.cx:8080/archiva/repository/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>codehaus</id>
-            <name>Codehaus Repository</name>
-            <url>http://repository.codehaus.org/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>internal</id>
-            <url>http://evil-server.ath.cx:8080/archiva/repository/internal/</url>
-        </repository>
-        <snapshotRepository>
-            <id>internal-snapshots</id>
-            <url>http://evil-server.ath.cx:8080/archiva/repository/internal-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-    -->
     <build>
         <plugins>
             <plugin>
@@ -82,25 +24,6 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-            <!--
-            <plugin>
-                <groupId>com.anydoby</groupId>
-                <artifactId>fatjar-maven-plugin</artifactId>
-                <version>0.0.1.1</version>
-                <configuration>
-                    <libonly>true</libonly>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>pre-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>prepare-jars</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
@@ -124,23 +47,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--
-            <plugin>
-                <groupId>de.asbach</groupId>
-                <artifactId>launch4j-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>launch4j</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
                 <configuration>
                     <archive>
+                        <manifestEntries>
+                            <Grademasterflash-Version>${project.version}</Grademasterflash-Version>
+                        </manifestEntries>
                         <manifest>
                             <mainClass>de.asbach.nmaster.run.Run</mainClass>
                         </manifest>
@@ -149,6 +63,15 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

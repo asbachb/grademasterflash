@@ -9,7 +9,7 @@ import de.asbach.nmaster.model.Module;
  */
 /**
  *
- * @author Benjamin Asbach <benjamin.asbach at gmail.com>
+ * @author Benjamin Asbach <my.name at gmail.com>
  */
 public class ModuleAddDialog extends javax.swing.JDialog {
 
