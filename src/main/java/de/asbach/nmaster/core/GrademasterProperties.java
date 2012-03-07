@@ -1,10 +1,7 @@
 package de.asbach.nmaster.core;
 
 import de.asbach.nmaster.gui.OptionsDialog;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.InvalidPropertiesFormatException;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -32,6 +29,12 @@ public class GrademasterProperties extends Properties{
             loadFromXML(new FileInputStream(new File(DEFAULT_HOME + DEFAULT_SETTINGS_XML)));
         } catch (InvalidPropertiesFormatException ex) {
             Logger.getLogger(OptionsDialog.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            try {
+                save();
+            } catch (IOException ex1) {
+                Logger.getLogger(GrademasterProperties.class.getName()).log(Level.SEVERE, null, ex1);
+            }
         } catch (IOException ex) {
             Logger.getLogger(OptionsDialog.class.getName()).log(Level.SEVERE, null, ex);
         }

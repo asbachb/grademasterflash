@@ -1,6 +1,7 @@
 package de.asbach.nmaster.gui;
 
 import de.asbach.nmaster.model.Module;
+import javax.swing.JOptionPane;
 
 /*
  * NewJDialog.java
@@ -156,7 +157,12 @@ public class ModuleAddDialog extends javax.swing.JDialog {
 
 private void cmdSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSaveActionPerformed
     try {
-        result = new Module(txtModuleAlias.getText(), txtModuleNo.getText(), Double.parseDouble(txtCreditPoints.getText()));
+        double creditPoints = Double.parseDouble(txtCreditPoints.getText());
+        if (creditPoints % 0.5 != 0) {
+            JOptionPane.showMessageDialog(this, "Ein Modul kann nur ganze oder halbe Credit Points besitzen.");
+            return;
+        }
+        result = new Module(txtModuleAlias.getText(), txtModuleNo.getText(), creditPoints);
         if (!"".equals(txtGrade.getText())) {
             final double grade = Double.parseDouble(txtGrade.getText().replace(",", "."));
 

@@ -29,7 +29,7 @@ public class GradeCalculator {
     }
 
     public static double calculateTotalGradeBySemesters(List<Semester> sList) {
-        int tCreditPoints = 0;
+        double tCreditPoints = 0;
         double tGrade = 0;
 
         for (Semester s : sList) {

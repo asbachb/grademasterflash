@@ -13,6 +13,20 @@
             <email>my.name@gmail.com</email>
         </developer>
     </developers>
+    <repositories>
+        <repository>
+            <id>akathist-repository</id>
+            <name>Akathist Repository</name>
+            <url>http://www.9stmaryrd.com/maven</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>akathist-repository</id>
+            <name>Akathist Repository</name>
+            <url>http://www.9stmaryrd.com/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <plugins>
             <plugin>
@@ -24,8 +38,10 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <!--
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -47,6 +63,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.3</version>
@@ -54,6 +71,7 @@
                     <archive>
                         <manifestEntries>
                             <Grademasterflash-Version>${project.version}</Grademasterflash-Version>
+                            <SplashScreen-Image>images/splash.png</SplashScreen-Image>
                         </manifestEntries>
                         <manifest>
                             <mainClass>de.asbach.nmaster.run.Run</mainClass>
@@ -70,6 +88,45 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                <artifactId>launch4j-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                    <execution>
+                        <id>l4j-clui</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>launch4j</goal>
+                        </goals>
+                        <configuration>
+                            <headerType>gui</headerType>
+                            <outfile>target/${project.artifactId}-${project.version}.exe</outfile>
+                            <jar>target/${project.artifactId}-${project.version}-jar-with-dependencies.jar</jar>
+                            <errTitle>${project.artifactId}</errTitle>
+                            <classPath>
+                                <mainClass>de.asbach.nmaster.run.Run</mainClass>
+                                <addDependencies>true</addDependencies>
+                                <preCp>anything</preCp>
+                            </classPath>
+                            <jre>
+                                <minVersion>1.6.0</minVersion>
+                            </jre>
+                            <versionInfo>
+                                <fileVersion>${project.version}.0</fileVersion>
+                                <txtFileVersion>txt file version?</txtFileVersion>
+                                <fileDescription>${project.artifactId}</fileDescription>
+                                <copyright>Benjamin Asbach, 2008</copyright>
+                                <productVersion>${project.version}.0</productVersion>
+                                <txtProductVersion>${project.artifactId}</txtProductVersion>
+                                <productName>${project.artifactId}</productName>
+                                <internalName>${project.artifactId}</internalName>
+                                <originalFilename>${project.artifactId}-${project.version}.exe</originalFilename>
+                            </versionInfo>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
