@@ -100,9 +100,13 @@ public class Version extends Thread {
     }
 
     private String getVersionFromPom() throws IOException, JDOMException {
-        Document doc = new SAXBuilder().build(
-                new File(System.getProperty("user.dir") +
-                File.separator + "pom.xml"));
+        Document doc = new SAXBuilder()
+                .build(
+                    Thread
+                        .currentThread()
+                        .getContextClassLoader()
+                        .getResourceAsStream(
+                            "META-INF/maven/de.asbach/grademasterflash/pom.xml"));
 
         Element rootElement = doc.getRootElement();
 
